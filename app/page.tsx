@@ -1,7 +1,8 @@
 //
 
+import DropdownList from "@/components/DropdownMenu";
 import Navbar from "@/components/layouts/navbar/Navbar";
-import { iLinkContent, linkContent } from "@/context/link-content";
+import { linkContent } from "@/context/link-content";
 import { cn } from "@/lib/utils";
 import chunkMaker from "@/utils/chunkMaker";
 import Link from "next/link";
@@ -16,10 +17,14 @@ export default function HomePage() {
       <div className="p-container">
         <h1 className="uppercase text-2xl text-center font-bold mb-8 text-black/80 dark:text-white/80">Quick Links</h1>
 
+        <div className="border-b mb-5 pb-2">
+          <DropdownList />
+        </div>
+
         <div className="grid grid-cols-8 gap-3">
           {linkContentChunk.map((chunk, i) => (
             <div key={i} className="space-y-3">
-              {chunk.map(({ title, options }: iLinkContent, i) => (
+              {chunk.map(({ title, options }, i) => (
                 <div
                   key={i}
                   className=" p-3 rounded-[8px] inset-shadow-[0px_0px_10px_rgba(0,0,0,0.2)] dark:inset-shadow-[0px_0px_10px_rgba(0,255,0,0.3)]"

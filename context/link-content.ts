@@ -1,17 +1,4 @@
-import { HTMLAttributeAnchorTarget } from "react";
-
-export interface iLinkOption {
-  title: string;
-  href: string;
-  target?: HTMLAttributeAnchorTarget;
-  class?: string;
-  icon?: string;
-}
-
-export interface iLinkContent {
-  title: string;
-  options: iLinkOption[];
-}
+import { iLinkContent } from "@/types";
 
 export const linkContent: iLinkContent[] = [
   // Localhost

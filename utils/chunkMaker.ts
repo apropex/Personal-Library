@@ -1,4 +1,4 @@
-import { iLinkContent } from "@/context/link-content";
+import { iLinkContent } from "@/types";
 
 export default function chunkMaker(array: iLinkContent[], chunkSize: number): iLinkContent[][] {
   const result: iLinkContent[][] = [];

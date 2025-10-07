@@ -9,6 +9,7 @@ export interface iLinkOption {
   href: string;
   target?: React.HTMLAttributeAnchorTarget;
   class?: string;
+  iconClass?: string;
   icon?: string;
 }
 
@@ -22,6 +23,7 @@ export interface iDropdownGroup {
   href: string;
   target?: React.HTMLAttributeAnchorTarget;
   class?: string;
+  iconClass?: string;
   icon?: string;
 }
 

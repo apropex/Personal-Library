@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { dropdownLinkContent } from "@/context/dropdown-link-contents";
 import { cn } from "@/lib/utils";
+import joinString from "@/utils/joinString";
+import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 
@@ -23,13 +25,13 @@ export default function DropdownList() {
           >
             <button
               type="button"
-              className="text-sm py-1.5 px-2 border rounded-[7px] cursor-pointer"
+              className="text-sm py-1.5 px-2 border rounded-[7px] cursor-pointer hover:border-rose-500/30"
             >
               {contents.title}
             </button>
           </DropdownMenuTrigger>
 
-          <DropdownMenuContent className="w-40 mt-4" align="start">
+          <DropdownMenuContent className="w-60 mt-4" align="start">
             {contents?.options?.map((content, i) => (
               <React.Fragment key={i}>
                 <DropdownMenuLabel className="text-rose-500">
@@ -46,6 +48,20 @@ export default function DropdownList() {
                           group.class
                         )}
                       >
+                        {group.icon ? (
+                          <Image
+                            src={group.icon}
+                            alt={joinString(group.title, " image")}
+                            width={20}
+                            height={20}
+                            className={cn(
+                              "size-5 p-[1px] border rounded-full object-cover",
+                              group.iconClass
+                            )}
+                          />
+                        ) : (
+                          <span className="size-5" />
+                        )}
                         {group.title}
                       </Link>
                     </DropdownMenuItem>

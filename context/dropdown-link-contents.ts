@@ -1,18 +1,22 @@
 import { iDropdownLinkContent } from "@/types";
+import { iDropdownOption } from "./../types/index";
 
-const shadcnGroups = [
+const shadcnGroups: iDropdownOption[] = [
   {
     title: "Blocks",
     groups: [
       {
-        title: "5173",
-        href: "http://localhost:5173",
+        title: "Shadcn UI Blocks",
+        href: "https://www.shadcnblocks.com/",
         target: "_blank",
+        icon: "https://i.ibb.co.com/1G5xKrCx/shadcnblocks.png",
+        iconClass: "bg-white",
       },
       {
         title: "3000",
         href: "http://localhost:3000",
         target: "_blank",
+        icon: "https://i.ibb.co.com/7tYzvDT7/nextjs-icon.webp",
       },
     ],
   },
@@ -23,6 +27,7 @@ const shadcnGroups = [
         title: "5000",
         href: "http://localhost:5000",
         target: "_blank",
+        icon: "https://i.ibb.co.com/7tYzvDT7/nextjs-icon.webp",
       },
       {
         title: "8000",

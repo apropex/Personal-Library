@@ -2,6 +2,7 @@
 import {
   ChevronDown,
   ChevronUp,
+  Code,
   FileCode,
   Home,
   Settings,
@@ -45,7 +46,7 @@ const items = [
   {
     title: "Utility",
     url: "/dashboard/utility",
-    icon: Home,
+    icon: Code,
   },
   {
     title: "Settings",
@@ -128,7 +129,7 @@ export function AppSidebar() {
           <SidebarGroup>
             <SidebarGroupLabel asChild>
               <CollapsibleTrigger>
-                Collapsable
+                Utility Codes
                 <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
               </CollapsibleTrigger>
             </SidebarGroupLabel>
